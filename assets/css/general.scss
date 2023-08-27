@@ -40,7 +40,7 @@ a {
   width: 100%;
   padding: 0 20px;
   display: flex;
-  //flex-flow: column;
+  flex-flow: column;
   @include inner-container();
   @include before-md() {
     padding: 0 10px;
