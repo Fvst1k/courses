@@ -1,0 +1,46 @@
+.header__courses {
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 22px 0;
+  width: 100%;
+}
+.block__content_header {
+
+}
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%
+}
+.header__logo {
+
+}
+.header__menu {
+  margin-left: 20px;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    max-width: 180px;
+    width: 100%;
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+  li {
+    margin-right: 40px;
+
+    a {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
