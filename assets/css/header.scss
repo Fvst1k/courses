@@ -34,10 +34,15 @@
   align-items: center;
   li {
     margin-right: 40px;
+    transition: ease-in-out all 0.3s;
+    &:hover {
+      transform: translateY(-2px);
+    }
 
     a {
       font-weight: 700;
       font-size: 18px;
+
     }
     &:last-child {
       margin-right: 0;

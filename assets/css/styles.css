@@ -436,6 +436,10 @@ card__rating-item {
 }
 .menu li {
   margin-right: 40px;
+  transition: ease-in-out all 0.3s;
+}
+.menu li:hover {
+  transform: translateY(-2px);
 }
 .menu li a {
   font-weight: 700;
@@ -443,6 +447,18 @@ card__rating-item {
 }
 .menu li:last-child {
   margin-right: 0;
+}
+
+.slats {
+  margin: 0 auto;
+}
+
+.slats__item {
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px 20px 100px;
 }
 
 .footer {
