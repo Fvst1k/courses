@@ -4,11 +4,6 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  transition: all ease-in-out 0.3s;
-}
-
-* {
-  font: 24px/1.1 "Inter", sans-serif;
 }
 
 /* Указываем box sizing */
@@ -93,7 +88,11 @@ html, body {
   height: 100%;
   background: #ffffff;
   scroll-behavior: smooth;
-  font: 24px/1.1 "Inter", sans-serif;
+}
+
+p, em, strong, ul, li, span, h1, h2, h3, h4, h5, h6, div, a, button {
+  font-family: open sans;
+  font-size: 16px/1.1;
 }
 
 img {
@@ -128,6 +127,7 @@ a {
   width: 100%;
   padding: 0 20px;
   display: flex;
+  flex-flow: column;
   width: 100%;
   margin: 0 auto;
 }
@@ -146,9 +146,9 @@ a {
     max-width: 960px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
   .block__content {
-    max-width: 1140px;
+    max-width: 1240px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -178,6 +178,49 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.header__courses {
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 22px 0;
+  width: 100%;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__menu {
+  margin-left: 20px;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo svg {
+  max-width: 180px;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  margin-right: 40px;
+}
+.menu li a {
+  font-weight: 700;
+  font-size: 18px;
+}
+.menu li:last-child {
+  margin-right: 0;
 }
 
 /* Slider */
