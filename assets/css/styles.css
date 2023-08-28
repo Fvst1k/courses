@@ -223,6 +223,47 @@ a {
   margin-right: 0;
 }
 
+.footer {
+  width: 100%;
+  margin: auto auto 0;
+  background: #000000;
+  padding: 60px 0;
+}
+.footer p, .footer em, .footer strong, .footer ul, .footer li, .footer span, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6, .footer div, .footer a, .footer button {
+  color: #ffffff;
+}
+
+.footer__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__links {
+  display: flex;
+  flex-flow: column;
+}
+.footer__links a:last-child {
+  margin-top: 15px;
+}
+
+.footer__img {
+  max-width: 100px;
+  width: 100%;
+  min-width: 60px;
+  overflow: hidden;
+}
+.footer__img img {
+  object-fit: contain;
+}
+
+.footer__subtitle {
+  font-size: 12px;
+  max-width: 600px;
+  width: 100%;
+}
+
 /* Slider */
 .slick-slider {
   position: relative;
