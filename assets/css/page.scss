@@ -1,0 +1,241 @@
+//=========================CARD===========================================//
+.card__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(250px, 420px) minmax(250px, 417px) minmax(200px, 250px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+
+  @include before-lg() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    .card__grid-item_1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .card__grid-item_2 {
+      grid-area: 2 / 1 / 4 / 2;
+    }
+    .card__grid-item_3 {
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    .card__grid-item_4 {
+      grid-area: 4 / 2 / 5 / 3;
+    }
+    .card__grid-item_5 {
+      grid-area: 1 / 2 / 4 / 3;
+    }
+    .card__course-pluses{
+      margin-left: 0;
+    }
+  }
+  @include before-sm(){
+    grid-template-columns: repeat(1, auto);
+    .card__grid-item{
+      grid-area: unset;
+    }
+
+  }
+
+
+}
+
+.card__grid-item_1 {
+  grid-area: 1 / 1 / 2 / 2;
+  max-width: 420px;
+  width: 100%;
+
+  video {
+    max-width: 420px;
+    width: 100%;
+    max-height: 180px;
+    height: 100%;
+  }
+}
+
+.card__grid-item_2 {
+  grid-area: 1 / 2 / 2 / 3;
+  max-width: 415px;
+  width: 100%;
+}
+
+.card__grid-item_3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.card__grid-item_4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.card__grid-item_5 {
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+
+.card__img {
+  margin-bottom: 15px;
+}
+
+.card__title {
+
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.card__rating-table {
+  display: grid;
+  margin-bottom: 18px;
+  max-width: 255px;
+  width: 100%;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+}
+
+card__rating-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__rating-item_star {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 2px;
+  }
+
+  &:last-child {
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
+.card__score {
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-left: 5px;
+  }
+
+}
+
+.card__rating-item_score {
+  display: flex;
+  align-items: center;
+}
+
+.card__rating-reviews-number {
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.card__rating-sum {
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 10px;
+  white-space: nowrap;
+
+}
+
+.card__score_like {
+  margin-right: 10px;
+}
+
+.card__rating-item_score p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card__rating-description {
+  padding-top: 30px;
+  max-width: 415px;
+  width: 100%;
+  border-top: 1px solid #B6B6B6;
+
+}
+
+.card__course-pluses {
+  margin-left: 15px;
+
+  li {
+    margin-left: 25px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+.card__pluses-title {
+  color: #14B11B;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card__course-minuses {
+  li {
+    margin-left: 25px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+.card__minuses-title {
+  color: #A00;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card__course-price {
+  margin-bottom: 15px;
+  font-size: 18px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.card__course-btn {
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  padding: 18px 50px;
+  background: #D93;
+  transition: ease-in-out all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+
+  }
+
+}
+
+
+.card__course-services {
+  li {
+    list-style-type: none;
+  }
+}
+
+.card__course-info {
+  p {
+    margin-top: 15px;
+  }
+}
+
+//=========================/CARD===========================================//
