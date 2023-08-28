@@ -21,6 +21,7 @@ Template Name: header
 </head>
 <body>
 <div class="wrapper">
+    <?php $front_id = get_option('page_on_front'); ?>
     <!-- Header -->
     <header class="header__courses">
         <div class="block__content block__content_header">
