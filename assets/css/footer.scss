@@ -1,0 +1,42 @@
+.footer {
+  width: 100%;
+  margin: auto auto 0;
+  background: #000000;
+  padding: 60px 0;
+
+  p, em, strong, ul, li, span, h1, h2, h3, h4, h5, h6, div, a, button {
+    color: #ffffff;
+  }
+}
+
+.footer__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__links {
+  display: flex;
+  flex-flow: column;
+  a {
+    &:last-child {
+      margin-top: 15px;
+    }
+  }
+
+}
+.footer__img {
+  max-width: 100px;
+  width: 100%;
+  min-width: 60px;
+  overflow: hidden;
+  img {
+    object-fit: contain;
+  }
+}
+.footer__subtitle {
+  font-size: 12px;
+  max-width: 600px;
+  width: 100%;
+}
