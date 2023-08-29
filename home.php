@@ -187,16 +187,82 @@ Template Name: template
                             ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
                             ТексеТексе
                             Тексе Тексе се ТексеТексе Тексе се ТексеТексе Тексе се ТексеТексе Тексе
-                            sssssss
-                            sssssss
-                            ssssss
-                            sssssss
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="content-courses">
+            <div class="block__content block__content_content-courses">
+                <div class="content-courses__list-wrapper">
+                    <h3 class="content-courses__title">
+                        Содержание курса
+                    </h3>
+                    <div class="content-courses__list">
+                        <div class="content-courses__item">
+                            <div class="content-courses__title-row">
+                                <div class="content-courses__item-counter">1.</div>
+                                <h4 class="content-courses__item-title">Текст текст текст</h4>
+                                <div class="content-courses__item-btn-group">
+                                    <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                    <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                </div>
+                            </div>
+                            <article class="content-courses__text">
+                                Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст
 
+                            </article>
+                        </div>
+                        <div class="content-courses__item">
+                            <div class="content-courses__title-row">
+                                <div class="content-courses__item-counter">1.</div>
+                                <h4 class="content-courses__item-title">Текст текст текст</h4>
+                                <div class="content-courses__item-btn-group">
+                                    <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                    <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                </div>
+                            </div>
+                            <article class="content-courses__text">
+                                Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст
+
+                            </article>
+                        </div>
+                        <div class="content-courses__item">
+                            <div class="content-courses__title-row">
+                                <div class="content-courses__item-counter">1.</div>
+                                <h4 class="content-courses__item-title">Текст текст текст</h4>
+                                <div class="content-courses__item-btn-group">
+                                    <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                    <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                </div>
+                            </div>
+                            <article class="content-courses__text">
+                                Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="reviews">
             <div class="block__content block__content_reviews">
                 <div class="reviews__content">
@@ -327,7 +393,9 @@ Template Name: template
 
             </div>
         </section>
+
     </main>
+
 
 
 <?php get_footer(); ?>
