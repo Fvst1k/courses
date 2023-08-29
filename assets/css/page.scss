@@ -6,7 +6,7 @@
   display: grid;
   width: 100%;
   grid-template-columns: minmax(250px, 420px) minmax(250px, 417px) minmax(200px, 250px);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   background: #ffffff;
@@ -84,6 +84,15 @@
 
 .card__img {
   margin-bottom: 15px;
+  overflow: hidden;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    object-fit: contain;
+
+  }
 }
 
 .card__title {
@@ -247,6 +256,9 @@
   p {
     margin-top: 15px;
   }
+  ol,ul {
+    padding-left: 18px;
+  }
 }
 
 //=========================/CARD===========================================//
@@ -299,6 +311,7 @@
   @include before-md{
     width: 100%;
     margin-bottom: 30px;
+
   }
 }
 .slats__text-group{
@@ -403,6 +416,9 @@
       opacity: 1;
 
     }
+    .content-courses__item-btn_1 {
+      transform: rotate(180deg) translateX(51%);
+    }
 
     .content-courses__item-btn_2 {
       transform: rotate(0deg) translateX(-50%);
@@ -477,3 +493,92 @@
 }
 
 //================= /сontent-courses=================
+
+//================== reviews =================//
+.reviews{
+  margin-bottom: 50px;
+}
+.reviews__content{
+  background: #ffffff;
+  padding: 30px 40px;
+}
+.reviews_title{
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.reviews__table{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 550px));
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  @include before-md{
+    grid-template-columns: repeat(1, minmax(300px, 550px));
+  }
+  @include before-sm{
+    grid-template-columns: repeat(1, minmax(200px, 550px));
+  }
+
+}
+.reviews__table-item{
+  padding: 20px;
+  border: 1px solid #E2E2E2;
+}
+.reviews__top{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include before-sm{
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.reviews__name{
+  margin-right: 20px;
+  max-width: 430px;
+  width: 100%;
+  @include before-lg{
+    strong{
+      font-size: 14px;
+    }
+  }
+  @include before-md{
+    margin-right: 0;
+    strong{
+      font-size: 16px;
+    }
+  }
+  @include before-sm{
+    margin-bottom: 10px;
+    strong{
+      font-size: 14px;
+    }
+  }
+}
+.reviews__name-title{
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  @include before-lg{
+    font-size: 18px;
+  }
+}
+.reviews__stars{
+  display: flex;
+  font-size: 16px;
+}
+.reviews__text{
+  @include before-sm{
+    font-size: 14px;
+
+  }
+}
+
+
+
+//================== /reviews =================//
+
+
