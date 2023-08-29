@@ -297,6 +297,7 @@ card__rating-item {
     max-height: 150px;
   }
   @include before-md{
+    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -305,6 +306,7 @@ card__rating-item {
   width: 75%;
   overflow: hidden;
   @include before-md{
+    padding-left: 0;
     max-width: 500px;
     width: 100%;
   }
@@ -331,3 +333,93 @@ card__rating-item {
   }
 }
 //================= /slats =================
+
+
+
+
+//================== reviews =================//
+.reviews{
+  margin-bottom: 50px;
+}
+.reviews__content{
+  background: #ffffff;
+  padding: 30px 40px;
+}
+.reviews_title{
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.reviews__table{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 550px));
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  @include before-md{
+    grid-template-columns: repeat(1, minmax(300px, 550px));
+  }
+  @include before-sm{
+    grid-template-columns: repeat(1, minmax(200px, 550px));
+  }
+
+}
+.reviews__table-item{
+  padding: 20px;
+  border: 1px solid #E2E2E2;
+}
+.reviews__top{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include before-sm{
+   flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.reviews__name{
+  margin-right: 20px;
+  max-width: 430px;
+  width: 100%;
+  @include before-lg{
+    strong{
+      font-size: 14px;
+    }
+  }
+  @include before-md{
+    margin-right: 0;
+    strong{
+      font-size: 16px;
+    }
+  }
+  @include before-sm{
+    margin-bottom: 10px;
+    strong{
+      font-size: 14px;
+    }
+  }
+}
+.reviews__name-title{
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  @include before-lg{
+    font-size: 18px;
+  }
+}
+.reviews__stars{
+  display: flex;
+  font-size: 16px;
+}
+.reviews__text{
+  @include before-sm{
+    font-size: 14px;
+
+  }
+}
+
+
+
+//================== /reviews =================//

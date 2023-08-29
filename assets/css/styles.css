@@ -506,6 +506,7 @@ card__rating-item {
 }
 @media screen and (max-width: 767px) {
   .slats__img {
+    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -517,6 +518,7 @@ card__rating-item {
 }
 @media screen and (max-width: 767px) {
   .slats__text-group {
+    padding-left: 0;
     max-width: 500px;
     width: 100%;
   }
@@ -546,6 +548,107 @@ card__rating-item {
   .slats__text {
     font-size: calc(14px + 2 * (100vw - 320px) / 860);
     height: 100%;
+  }
+}
+
+.reviews {
+  margin-bottom: 50px;
+}
+
+.reviews__content {
+  background: #ffffff;
+  padding: 30px 40px;
+}
+
+.reviews_title {
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.reviews__table {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 550px));
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .reviews__table {
+    grid-template-columns: repeat(1, minmax(300px, 550px));
+  }
+}
+@media screen and (max-width: 575px) {
+  .reviews__table {
+    grid-template-columns: repeat(1, minmax(200px, 550px));
+  }
+}
+
+.reviews__table-item {
+  padding: 20px;
+  border: 1px solid #E2E2E2;
+}
+
+.reviews__top {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 575px) {
+  .reviews__top {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.reviews__name {
+  margin-right: 20px;
+  max-width: 430px;
+  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .reviews__name strong {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reviews__name {
+    margin-right: 0;
+  }
+  .reviews__name strong {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .reviews__name {
+    margin-bottom: 10px;
+  }
+  .reviews__name strong {
+    font-size: 14px;
+  }
+}
+
+.reviews__name-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (max-width: 991px) {
+  .reviews__name-title {
+    font-size: 18px;
+  }
+}
+
+.reviews__stars {
+  display: flex;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 575px) {
+  .reviews__text {
+    font-size: 14px;
   }
 }
 
