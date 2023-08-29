@@ -6,7 +6,7 @@
   display: grid;
   width: 100%;
   grid-template-columns: minmax(250px, 420px) minmax(250px, 417px) minmax(200px, 250px);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   background: #ffffff;
@@ -84,6 +84,15 @@
 
 .card__img {
   margin-bottom: 15px;
+  overflow: hidden;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    object-fit: contain;
+
+  }
 }
 
 .card__title {
@@ -107,7 +116,7 @@
 
 }
 
-card__rating-item {
+.card__rating-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,6 +275,9 @@ card__rating-item {
   p {
     margin-top: 15px;
   }
+  ol,ul {
+    padding-left: 18px;
+  }
 }
 
 //=========================/CARD===========================================//
@@ -318,6 +330,7 @@ card__rating-item {
   @include before-md{
     width: 100%;
     margin-bottom: 30px;
+
   }
 }
 .slats__text-group{
@@ -351,10 +364,154 @@ card__rating-item {
     height: 100%;
   }
 }
+
 //================= /slats =================
 
+//================= сontent-courses=================
+
+.content-courses {
+  width: 100%;
+  margin: 30px 0 50px;
 
 
+}
+
+.block__content_content-courses {
+
+}
+
+.content-courses__list-wrapper {
+  background: #ffffff;
+  padding: 20px;
+}
+
+.content-courses__title {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.content-courses__list {
+  margin: 150px auto 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  @include before-xl() {
+    margin: 80px auto 40px;
+
+  }
+
+}
+
+.content-courses__item {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #000000;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  flex-flow: column;
+  background: #ffffff;
+
+  &:last-child {
+    border-bottom: 1px solid #000000;
+
+  }
+
+  .content-courses__text {
+    @include before-sm() {
+      font-size: 12px !important;
+    }
+  }
+
+  &.active {
+    overflow: unset;
+
+    .content-courses__text {
+      font-size: 16px;
+      opacity: 1;
+
+    }
+    .content-courses__item-btn_1 {
+      transform: rotate(180deg) translateX(51%);
+    }
+
+    .content-courses__item-btn_2 {
+      transform: rotate(0deg) translateX(-50%);
+    }
+  }
+
+}
+
+.content-courses__title-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+
+}
+
+.content-courses__item-counter {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.content-courses__item-title {
+  font-weight: 700;
+  font-size: 18px;
+  padding-right: 5px;
+  @include before-sm() {
+    font-size: 14px;
+  }
+}
+
+.content-courses__item-btn-group {
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin-right: 2px;
+
+  border-radius: 50%;
+  border: 2px solid #000000;
+  cursor: pointer;
+  transition: ease-in-out all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.content-courses__item-btn {
+
+  width: 15px;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  transition: ease-in-out all 0.3s;
+
+}
+
+.content-courses__item-btn_2 {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.content-courses__text {
+  transition: ease-in-out all 0.3s;
+  height: 0;
+  opacity: 0;
+
+
+}
+
+//================= /сontent-courses=================
 
 //================== reviews =================//
 .reviews{
@@ -393,7 +550,7 @@ card__rating-item {
   justify-content: space-between;
   align-items: center;
   @include before-sm{
-   flex-flow: column;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
   }
@@ -442,3 +599,5 @@ card__rating-item {
 
 
 //================== /reviews =================//
+
+

@@ -524,7 +524,6 @@ card__rating-item {
 }
 @media screen and (max-width: 767px) {
   .slats__img {
-    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -536,7 +535,6 @@ card__rating-item {
 }
 @media screen and (max-width: 767px) {
   .slats__text-group {
-    padding-left: 0;
     max-width: 500px;
     width: 100%;
   }
@@ -569,105 +567,121 @@ card__rating-item {
   }
 }
 
-.reviews {
-  margin-bottom: 50px;
+.content-courses {
+  width: 100%;
+  margin: 30px 0 50px;
 }
 
-.reviews__content {
+.content-courses__list-wrapper {
   background: #ffffff;
-  padding: 30px 40px;
-}
-
-.reviews_title {
-  margin-bottom: 35px;
-  font-size: 25px;
-  font-weight: 700;
-}
-
-.reviews__table {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 550px));
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-@media screen and (max-width: 767px) {
-  .reviews__table {
-    grid-template-columns: repeat(1, minmax(300px, 550px));
-  }
-}
-@media screen and (max-width: 575px) {
-  .reviews__table {
-    grid-template-columns: repeat(1, minmax(200px, 550px));
-  }
-}
-
-.reviews__table-item {
   padding: 20px;
-  border: 1px solid #E2E2E2;
 }
 
-.reviews__top {
-  margin-bottom: 40px;
+.content-courses__title {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.content-courses__list {
+  margin: 150px auto 50px;
   display: flex;
-  justify-content: space-between;
+  flex-flow: column;
   align-items: center;
-}
-@media screen and (max-width: 575px) {
-  .reviews__top {
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.reviews__name {
-  margin-right: 20px;
-  max-width: 430px;
+  max-width: 1000px;
   width: 100%;
 }
-@media screen and (max-width: 991px) {
-  .reviews__name strong {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .reviews__name {
-    margin-right: 0;
-  }
-  .reviews__name strong {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .reviews__name {
-    margin-bottom: 10px;
-  }
-  .reviews__name strong {
-    font-size: 14px;
+@media screen and (max-width: 1239px) {
+  .content-courses__list {
+    margin: 80px auto 40px;
   }
 }
 
-.reviews__name-title {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-}
-@media screen and (max-width: 991px) {
-  .reviews__name-title {
-    font-size: 18px;
-  }
-}
-
-.reviews__stars {
+.content-courses__item {
   display: flex;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #000000;
+  cursor: pointer;
+  overflow: hidden;
+  flex-flow: column;
+  background: #ffffff;
+}
+.content-courses__item:last-child {
+  border-bottom: 1px solid #000000;
+}
+@media screen and (max-width: 575px) {
+  .content-courses__item .content-courses__text {
+    font-size: 12px !important;
+  }
+}
+.content-courses__item.active {
+  overflow: unset;
+}
+.content-courses__item.active .content-courses__text {
   font-size: 16px;
+  opacity: 1;
+}
+.content-courses__item.active .content-courses__item-btn_2 {
+  transform: rotate(0deg) translateX(-50%);
 }
 
+.content-courses__title-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.content-courses__item-counter {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.content-courses__item-title {
+  font-weight: 700;
+  font-size: 18px;
+  padding-right: 5px;
+}
 @media screen and (max-width: 575px) {
-  .reviews__text {
+  .content-courses__item-title {
     font-size: 14px;
   }
+}
+
+.content-courses__item-btn-group {
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin-right: 2px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  cursor: pointer;
+  transition: ease-in-out all 0.3s;
+}
+.content-courses__item-btn-group:hover {
+  transform: scale(1.05);
+}
+
+.content-courses__item-btn {
+  width: 15px;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  transition: ease-in-out all 0.3s;
+}
+
+.content-courses__item-btn_2 {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.content-courses__text {
+  transition: ease-in-out all 0.3s;
+  height: 0;
+  opacity: 0;
 }
 
 .footer {
