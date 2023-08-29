@@ -151,11 +151,30 @@
   display: flex;
   align-items: center;
 }
+.mdp-liker-box .mdp-liker-buttons button span {
+  border-left: none
+}
+
+
+#mdp-liker-btn-1{
+  background:url("../images/like-svgrepo-com.jpg") no-repeat;
+  background-size: contain;
+  margin: unset;
+  padding-left: 12px;
+}
+#mdp-liker-btn-3{
+  background:url("../images/like-svgrepo-com 2.png") no-repeat;
+  background-size: contain;
+  margin:0 0 0 10px;
+  padding-left: 12px;
+}
+
 
 .card__rating-reviews-number {
   font-size: 18px;
   font-weight: 400;
   white-space: nowrap;
+
 }
 
 .card__rating-sum {
