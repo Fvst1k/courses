@@ -7,7 +7,6 @@ Template Name: template
 <?php get_header() ?>
 
 
-
     <main>
         <section class="card">
             <div class="block__content">
@@ -179,19 +178,92 @@ Template Name: template
                     </div>
                     <div class="slats__text-group">
                         <div class="slats__title">И ТАК, КТО ТАКОЙ SEO-СПЕЦИАЛИСТ?</div>
-                        <div class="slats__text">Тексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе
+                        <div class="slats__text">Тексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
+                            ТексеТексе
                             Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
-                            ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе
+                            ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
+                            ТексеТексе
                             Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
-                            ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе
+                            ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
+                            ТексеТексе
                             Тексе Тексе се ТексеТексе Тексе се ТексеТексе Тексе се ТексеТексе Тексе
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
+        <section class="content-courses">
+            <div class="block__content block__content_content-courses">
+                <div class="content-courses__list-wrapper">
+                    <h3 class="content-courses__title">
+                        Содержание курса
+                    </h3>
+                    <div class="content-courses__list">
+                        <div class="content-courses__item">
+                            <div class="content-courses__title-row">
+                                <div class="content-courses__item-counter">1.</div>
+                                <h4 class="content-courses__item-title">Текст текст текст</h4>
+                                <div class="content-courses__item-btn-group">
+                                    <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                    <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                </div>
+                            </div>
+                            <article class="content-courses__text">
+                                Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст
 
+                            </article>
+                        </div>
+                        <div class="content-courses__item">
+                            <div class="content-courses__title-row">
+                                <div class="content-courses__item-counter">1.</div>
+                                <h4 class="content-courses__item-title">Текст текст текст</h4>
+                                <div class="content-courses__item-btn-group">
+                                    <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                    <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                </div>
+                            </div>
+                            <article class="content-courses__text">
+                                Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст
+
+                            </article>
+                        </div>
+                        <div class="content-courses__item">
+                            <div class="content-courses__title-row">
+                                <div class="content-courses__item-counter">1.</div>
+                                <h4 class="content-courses__item-title">Текст текст текст</h4>
+                                <div class="content-courses__item-btn-group">
+                                    <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                    <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                </div>
+                            </div>
+                            <article class="content-courses__text">
+                                Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                                текст текст текст текст текст текст текст текст текст текст
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 <?php get_footer(); ?>
