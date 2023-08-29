@@ -93,13 +93,10 @@ html, body {
 p, em, strong, ul, li, span, h1, h2, h3, h4, h5, h6, div, a, button {
   font-family: open sans;
   font-size: 16px/1.1;
-
 }
 
 main {
   margin: 0 auto;
-
-
 }
 
 img {
@@ -123,9 +120,9 @@ a {
   margin: 0 auto;
   display: flex;
   flex-flow: column;
-  background: #ffffff;
   position: relative;
   overflow: hidden;
+  background: #EDEDED;
 }
 
 .block__content {
@@ -187,6 +184,52 @@ a {
   bottom: 0;
 }
 
+.header__courses {
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 22px 0;
+  width: 100%;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__menu {
+  margin-left: 20px;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo svg {
+  max-width: 180px;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  margin-right: 40px;
+  transition: ease-in-out all 0.3s;
+}
+.menu li:hover {
+  transform: translateY(-2px);
+}
+.menu li a {
+  font-weight: 700;
+  font-size: 18px;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
 
 .card__grid {
   display: grid;
@@ -195,11 +238,13 @@ a {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  background: #ffffff;
+  margin-top: 60px;
+  padding: 20px;
 }
 @media screen and (max-width: 991px) {
   .card__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -387,7 +432,11 @@ card__rating-item {
   text-align: center;
   white-space: nowrap;
   display: flex;
-  padding: 18px 50px;
+  padding: 18px 10px;
+  max-width: 254px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   background: #D93;
   transition: ease-in-out all 0.3s;
 }
@@ -401,56 +450,14 @@ card__rating-item {
 
 .card__course-info p {
   margin-top: 15px;
-
-.header__courses {
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 22px 0;
-  width: 100%;
-}
-
-.header__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.header__menu {
-  margin-left: 20px;
-}
-
-.header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header__logo svg {
-  max-width: 180px;
-  width: 100%;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-}
-.menu li {
-  margin-right: 40px;
-  transition: ease-in-out all 0.3s;
-}
-.menu li:hover {
-  transform: translateY(-2px);
-}
-.menu li a {
-  font-weight: 700;
-  font-size: 18px;
-}
-.menu li:last-child {
-  margin-right: 0;
 }
 
 .slats {
   margin: 0 auto;
+}
+
+.block__content_slats {
+  margin-top: 100px;
 }
 
 .slats__item {
@@ -459,6 +466,87 @@ card__rating-item {
   display: flex;
   align-items: center;
   padding: 20px 50px 20px 100px;
+}
+
+.slats__item {
+  margin-bottom: 30px;
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px 20px 100px;
+}
+@media screen and (max-width: 991px) {
+  .slats__item {
+    padding: 20px 30px 20px 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slats__item {
+    flex-flow: column;
+    align-items: center;
+    height: auto;
+  }
+}
+@media screen and (max-width: 575px) {
+  .slats__item {
+    padding: 10px 15px 10px 15px;
+    align-items: center;
+  }
+}
+
+.slats__img {
+  max-width: 200px;
+  width: 25%;
+  overflow: hidden;
+}
+.slats__img img {
+  object-fit: contain;
+  max-height: 150px;
+}
+@media screen and (max-width: 767px) {
+  .slats__img {
+    margin-bottom: 30px;
+  }
+}
+
+.slats__text-group {
+  padding-left: 30px;
+  width: 75%;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .slats__text-group {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+.slats__title {
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .slats__title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .slats__title {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.slats__text {
+  text-wrap: normal;
+}
+@media screen and (max-width: 575px) {
+  .slats__text {
+    font-size: calc(14px + 2 * (100vw - 320px) / 860);
+    height: 100%;
+  }
 }
 
 .footer {
@@ -500,7 +588,6 @@ card__rating-item {
   font-size: 12px;
   max-width: 600px;
   width: 100%;
-
 }
 
 /* Slider */

@@ -253,16 +253,81 @@ card__rating-item {
 
 //================= slats =================
 .slats {
-  margin: 100px auto 0;
+  margin: 0 auto;
 }
 .block__content_slats {
-
+  margin-top: 100px;
 }
+
 .slats__item {
   background: #ffffff;
   width: 100%;
   display: flex;
   align-items: center;
   padding: 20px 50px 20px 100px;
+}
+
+.slats__item {
+  margin-bottom: 30px;
+  background: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px 20px 100px;
+  @include before-lg{
+    padding: 20px 30px 20px 50px;
+  }
+  @include before-md{
+    flex-flow: column;
+    align-items: center;
+    height: auto;
+  }
+  @include before-sm{
+    padding: 10px 15px 10px 15px;
+    align-items: center;
+
+  }
+}
+.slats__img{
+  max-width: 200px;
+  width: 25%;
+  overflow: hidden;
+  img{
+    object-fit: contain;
+    max-height: 150px;
+  }
+  @include before-md{
+    margin-bottom: 30px;
+  }
+}
+.slats__text-group{
+  padding-left: 30px;
+  width: 75%;
+  overflow: hidden;
+  @include before-md{
+    max-width: 500px;
+    width: 100%;
+  }
+}
+.slats__title{
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 700;
+  @include before-md{
+    font-size: 20px;
+  }
+  @include before-sm{
+    font-size: 18px;
+    text-align: center;
+
+  }
+}
+.slats__text{
+
+  text-wrap: normal;
+  @include before-sm{
+    font-size: (calc(14px + 2 * ((100vw - 320px) / 860)));
+    height: 100%;
+  }
 }
 //================= /slats =================

@@ -175,7 +175,7 @@ Template Name: template
             <div class="block__content block__content_slats">
                 <div class="slats__item">
                     <div class="slats__img">
-                        <img src="" alt=""/>
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png?>" alt="error"/>
                     </div>
                     <div class="slats__text-group">
                         <div class="slats__title">И ТАК, КТО ТАКОЙ SEO-СПЕЦИАЛИСТ?</div>
@@ -184,11 +184,10 @@ Template Name: template
                             ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе
                             Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе
                             ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе Тексе ТексеТексе
-                            Тексе Тексе
+                            Тексе Тексе се ТексеТексе Тексе се ТексеТексе Тексе се ТексеТексе Тексе
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
