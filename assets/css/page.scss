@@ -260,6 +260,33 @@
     padding-left: 18px;
   }
 }
+.mdp-liker-buttons {
+  display: flex;
+  align-items: center;
+}
+.mdp-liker-box .mdp-liker-buttons button span {
+  border-left: none;
+}
+
+
+#mdp-liker-btn-1{
+  background:url("../images/like-svgrepo-com1.svg") no-repeat left;
+  background-size: contain;
+  margin: unset;
+  padding-left:12px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+#mdp-liker-btn-3{
+  background:url("../images/like-svgrepo-com2.svg") no-repeat left;
+  background-size: contain;
+  margin:0 0 0 15px;
+  padding-left: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
 
 //=========================/CARD===========================================//
 

@@ -235,7 +235,7 @@ a {
   display: grid;
   width: 100%;
   grid-template-columns: minmax(250px, 420px) minmax(250px, 417px) minmax(200px, 250px);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   background: #ffffff;
@@ -309,6 +309,14 @@ a {
 
 .card__img {
   margin-bottom: 15px;
+  overflow: hidden;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__img img {
+  object-fit: contain;
 }
 
 .card__title {
@@ -330,7 +338,7 @@ a {
   grid-row-gap: 10px;
 }
 
-card__rating-item {
+.card__rating-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,6 +459,36 @@ card__rating-item {
 .card__course-info p {
   margin-top: 15px;
 }
+.card__course-info ol, .card__course-info ul {
+  padding-left: 18px;
+}
+
+.mdp-liker-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.mdp-liker-box .mdp-liker-buttons button span {
+  border-left: none;
+}
+
+#mdp-liker-btn-1 {
+  background: url("../images/like-svgrepo-com1.svg") no-repeat left;
+  background-size: contain;
+  margin: unset;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#mdp-liker-btn-3 {
+  background: url("../images/like-svgrepo-com2.svg") no-repeat left;
+  background-size: contain;
+  margin: 0 0 0 15px;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
 
 .slats {
   margin: 0 auto;
@@ -506,6 +544,7 @@ card__rating-item {
 }
 @media screen and (max-width: 767px) {
   .slats__img {
+    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -517,6 +556,7 @@ card__rating-item {
 }
 @media screen and (max-width: 767px) {
   .slats__text-group {
+    padding-left: 0;
     max-width: 500px;
     width: 100%;
   }
@@ -603,6 +643,9 @@ card__rating-item {
   font-size: 16px;
   opacity: 1;
 }
+.content-courses__item.active .content-courses__item-btn_1 {
+  transform: rotate(180deg) translateX(51%);
+}
 .content-courses__item.active .content-courses__item-btn_2 {
   transform: rotate(0deg) translateX(-50%);
 }
@@ -664,6 +707,107 @@ card__rating-item {
   transition: ease-in-out all 0.3s;
   height: 0;
   opacity: 0;
+}
+
+.reviews {
+  margin-bottom: 50px;
+}
+
+.reviews__content {
+  background: #ffffff;
+  padding: 30px 40px;
+}
+
+.reviews_title {
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.reviews__table {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 550px));
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .reviews__table {
+    grid-template-columns: repeat(1, minmax(300px, 550px));
+  }
+}
+@media screen and (max-width: 575px) {
+  .reviews__table {
+    grid-template-columns: repeat(1, minmax(200px, 550px));
+  }
+}
+
+.reviews__table-item {
+  padding: 20px;
+  border: 1px solid #E2E2E2;
+}
+
+.reviews__top {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 575px) {
+  .reviews__top {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.reviews__name {
+  margin-right: 20px;
+  max-width: 430px;
+  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .reviews__name strong {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .reviews__name {
+    margin-right: 0;
+  }
+  .reviews__name strong {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .reviews__name {
+    margin-bottom: 10px;
+  }
+  .reviews__name strong {
+    font-size: 14px;
+  }
+}
+
+.reviews__name-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (max-width: 991px) {
+  .reviews__name-title {
+    font-size: 18px;
+  }
+}
+
+.reviews__stars {
+  display: flex;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 575px) {
+  .reviews__text {
+    font-size: 14px;
+  }
 }
 
 .footer {
