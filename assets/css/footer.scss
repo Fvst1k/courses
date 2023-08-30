@@ -14,15 +14,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include before-md(){
+    flex-flow: column;
+
+  }
 }
 
 .footer__links {
   display: flex;
   flex-flow: column;
+  padding: 0 10px;
   a {
+    transition: ease-in-out all 0.3s;
     &:last-child {
       margin-top: 15px;
     }
+    &:hover {
+      transform: translateY(-2px);
+
+    }
+    @include before-md(){
+      text-align: center;
+
+    }
+  }
+  @include before-md(){
+    padding: 10px 10px;
+
   }
 
 }
@@ -31,12 +49,26 @@
   width: 100%;
   min-width: 60px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     object-fit: contain;
+  }
+  @include before-md(){
+    padding: 10px 0;
+
+
   }
 }
 .footer__subtitle {
   font-size: 12px;
   max-width: 600px;
   width: 100%;
+  @include before-md(){
+    padding: 10px 0;
+    text-align: center;
+
+
+  }
 }
