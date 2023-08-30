@@ -1,16 +1,18 @@
 <!-- Footer -->
-
+<?php $front_id = get_option('page_on_front'); ?>
 <footer class="footer">
     <div class="block__content block__content_footer ">
         <div class="footer__row">
-            <div class="footer__img">
-                <img src="" alt="">
-            </div>
+            <a href="#" class="footer__img">
+                <img src="<?php the_field('footer_logo', $front_id); ?>" alt="">
+            </a>
             <div class="footer__links">
-                <a href="tel:">99999999999</a>
-                <a href="mailto:">admin@admin</a>
+                <a href="tel:<?php the_field('footer_num', $front_id); ?>"><?php the_field('footer_num', $front_id); ?></a>
+                <a href="mailto:<?php the_field('footer_mail', $front_id); ?>"><?php the_field('footer_mail', $front_id); ?></a>
             </div>
-            <p class="footer__subtitle">Текст текст текст текст текст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст тексттекст текст текст</p>
+            <div class="footer__subtitle">
+                <?php the_field('footer_subtitle', $front_id); ?>
+            </div>
         </div>
     </div>
 </footer>

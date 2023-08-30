@@ -11,22 +11,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%
+  width: 100%;
+  @include before-md() {
+    flex-flow: column;
+  }
 }
-.header__logo {
 
-}
 .header__menu {
   margin-left: 20px;
+  @include before-md(){
+    margin-left: unset;
+  }
 }
 .header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  max-width: 180px;
+  width: 100%;
 
-  svg {
+  img {
+
+    object-fit: contain;
     max-width: 180px;
     width: 100%;
+  }
+  @include before-md(){
+    padding-bottom: 20px;
   }
 }
 .menu {
@@ -46,6 +58,15 @@
     }
     &:last-child {
       margin-right: 0;
+    }
+  }
+  @include before-md(){
+    flex-flow: column;
+    li {
+      margin-right: 0;
+    }
+    a {
+      font-size: 16px;
     }
   }
 }
