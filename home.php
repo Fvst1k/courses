@@ -88,12 +88,6 @@ Template Name: template
                                 </div>
                             </div>
 
-                            <div class="card__rating-item card__rating-item_score">
-                                <div class="card__score card__score_like">
-                                    <?php
-                                    echo do_shortcode('[liker]');
-                                    ?>
-
                             <div class="card__grid-item card__grid-item_4">
                                 <div class="card__course-minuses">
                                     <div class="card__minuses-title"><?php the_sub_field('card_minuses_title'); ?></div>
