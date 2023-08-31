@@ -9,6 +9,8 @@ Template Name: template
 
     <main>
         <?php
+        $like_counter = 9999;
+
         if (have_rows('create_cards')):
             while (have_rows('create_cards')) :
                 the_row(); ?>
@@ -75,8 +77,9 @@ Template Name: template
                                         <div class="card__rating-sum"><?php the_sub_field('card_rating'); ?></div>
                                     </div>
                                     <div class="card__rating-item card__rating-item_score">
-
-                                        <?php echo do_shortcode('[liker]'); ?>
+                                        <?php echo do_shortcode('[wp_ulike id="'.$like_counter.'"]');
+                                        $like_counter++;
+                                        ?>
                                     </div>
                                 </div>
                                 <div class="card__rating-description">
