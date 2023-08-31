@@ -1,5 +1,25 @@
+.block__content_filter {
+  padding: 30px 20px 10px;
 
+}
+.filter {
+  width: 100%;
+}
+.filter__row {
+  display: flex;
+  align-items: center;
 
+  p {
+    margin-right: 20px;
+  }
+}
+.filter__btn-list {
+  max-width: 250px;
+  width: 100%;
+  @include before-sm(){
+    font-size: 14px;
+  }
+}
 
 //=========================CARD===========================================//
 .card__grid {

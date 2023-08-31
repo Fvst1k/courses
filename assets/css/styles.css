@@ -261,6 +261,32 @@ a {
   }
 }
 
+.block__content_filter {
+  padding: 30px 20px 10px;
+}
+
+.filter {
+  width: 100%;
+}
+
+.filter__row {
+  display: flex;
+  align-items: center;
+}
+.filter__row p {
+  margin-right: 20px;
+}
+
+.filter__btn-list {
+  max-width: 250px;
+  width: 100%;
+}
+@media screen and (max-width: 575px) {
+  .filter__btn-list {
+    font-size: 14px;
+  }
+}
+
 .card__grid {
   display: grid;
   width: 100%;

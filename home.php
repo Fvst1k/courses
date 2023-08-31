@@ -8,159 +8,193 @@ Template Name: template
 
 
     <main>
-        <?php
-        $like_counter = 9999;
+        <section  class="filter__btns">
+            <div class="block__content block__content_filter">
+                <div class="filter__row">
+                    <p>Фильтрация: </p>
+                    <select class="filter__btn-list">
+                        <option value="1" class="filter__btn">
+                            для начинающих
+                        </option>
+                        <option value="2" class="filter__btn">
+                            для опытных
+                        </option >
+                        <option value="3" class="filter__btn filter__btn_price" selected>
+                            сначала недорогие
+                        </option >
 
-        if (have_rows('create_cards')):
-            while (have_rows('create_cards')) :
-                the_row(); ?>
-                <section class="card">
-                    <div class="block__content">
-                        <div class="card__grid">
-                            <div class="card__grid-item card__grid-item_1">
-                                <div class="card__img">
-                                    <img src="<?php the_sub_field('card_image'); ?>" alt="error">
-                                </div>
-                                <div class="card__video">
-                                    <video src="<?php the_sub_field('card_video'); ?>" controls>
-                                    </video>
-                                </div>
-                            </div>
-                            <div class="card__grid-item card__grid-item_2">
-                                <div class="card__title">
-                                    <?php the_sub_field('card_title'); ?>
-                                </div>
-                                <div class="card__rating-table">
-                                    <div class="card__rating-item card__rating-item_star">
-                                        <div class="card__rating-star">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
-                                                      fill="#ED8A19"/>
-                                            </svg>
+                        <option value="4" class="filter__btn filter__btn_price_inv" >
+                            сначала дорогие
+                        </option >
+
+                        <option value="5" class="filter__btn">
+                            по рейтингу
+                        </option >
+                        <option value="6" class="filter__btn">
+                            по отзывам
+                        </option >
+                    </select>
+                </div>
+
+            </div>
+        </section>
+        <div class="filter">
+            <?php
+            $like_counter = 9999;
+            if (have_rows('create_cards')):
+                while (have_rows('create_cards')) :
+                    the_row(); ?>
+                    <div class="filter_item" reviews="<?php the_sub_field('filter_reviews'); ?>" rating="<?php the_sub_field('filter_rating'); ?>" level="<?php the_sub_field('filter_level'); ?>" data-price="<?php the_sub_field('filter_price'); ?>">
+                        <section class="card">
+                            <div class="block__content">
+                                <div class="card__grid">
+                                    <div class="card__grid-item card__grid-item_1">
+                                        <div class="card__img">
+                                            <img src="<?php the_sub_field('card_image'); ?>" alt="error">
                                         </div>
-                                        <div class="card__rating-star">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
-                                                      fill="#ED8A19"/>
-                                            </svg>
-                                        </div>
-                                        <div class="card__rating-star">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
-                                                      fill="#ED8A19"/>
-                                            </svg>
-                                        </div>
-                                        <div class="card__rating-star">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
-                                                      fill="#ED8A19"/>
-                                            </svg>
-                                        </div>
-                                        <div class="card__rating-star">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
-                                                      fill="#ED8A19"/>
-                                            </svg>
+                                        <div class="card__video">
+                                            <video src="<?php the_sub_field('card_video'); ?>" controls>
+                                            </video>
                                         </div>
                                     </div>
-                                    <div class="card__rating-item">
-                                        <div class="card__rating-reviews-number">
-                                            <?php the_sub_field('card_review'); ?>
+                                    <div class="card__grid-item card__grid-item_2">
+                                        <div class="card__title">
+                                            <?php the_sub_field('card_title'); ?>
                                         </div>
-                                    </div>
-                                    <div class="card__rating-item">
-                                        <div class="card__rating-sum"><?php the_sub_field('card_rating'); ?></div>
-                                    </div>
-                                    <div class="card__rating-item card__rating-item_score">
-                                        <?php echo do_shortcode('[wp_ulike id="'.$like_counter.'"]');
-                                        $like_counter++;
-                                        ?>
-                                    </div>
-                                </div>
-                                <div class="card__rating-description">
-                                    <?php the_sub_field('card_text'); ?>
-                                </div>
-                            </div>
-                            <div class="card__grid-item card__grid-item_3">
-                                <div class="card__course-pluses">
-                                    <div class="card__pluses-title"><?php the_sub_field('card_pluses_title'); ?></div>
-                                    <?php the_sub_field('card_pluses_text'); ?>
-                                </div>
-                            </div>
-
-                            <div class="card__grid-item card__grid-item_4">
-                                <div class="card__course-minuses">
-                                    <div class="card__minuses-title"><?php the_sub_field('card_minuses_title'); ?></div>
-                                    <?php the_sub_field('card_minuses_text'); ?>
-                                </div>
-                            </div>
-                            <div class="card__grid-item card__grid-item_5">
-                                <div class="card__course-price"><?php the_sub_field('card_price'); ?></div>
-                                <a href="<?php the_sub_field('card_btn_link'); ?>" class="card__course-btn">
-                                    <?php the_sub_field('card_btn'); ?>
-                                </a>
-
-                                <div class="card__course-info">
-                                    <?php the_sub_field('card_info'); ?>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <?php
-                if (get_sub_field('courses_content_select')) { ?>
-                    <section class="content-courses">
-                        <div class="block__content block__content_content-courses">
-                            <div class="content-courses__list-wrapper">
-                                <div class="content-courses__title">
-                                    <?php the_sub_field('courses_title'); ?>
-                                </div>
-                                <div class="content-courses__list">
-                                    <?php
-                                    if (have_rows('courses_summary')):
-                                        while (have_rows('courses_summary')) :
-                                            the_row(); ?>
-                                            <div class="content-courses__item">
-                                                <div class="content-courses__title-row">
-                                                    <div class="content-courses__item-counter"><?php the_sub_field('courses_summary_number'); ?></div>
-                                                    <h4 class="content-courses__item-title"><?php the_sub_field('courses_summary_title'); ?></h4>
-                                                    <div class="content-courses__item-btn-group">
-                                                        <div class="content-courses__item-btn content-courses__item-btn_1"></div>
-                                                        <div class="content-courses__item-btn content-courses__item-btn_2"></div>
-                                                    </div>
+                                        <div class="card__rating-table">
+                                            <div class="card__rating-item card__rating-item_star">
+                                                <div class="card__rating-star">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
+                                                              fill="#ED8A19"/>
+                                                    </svg>
                                                 </div>
-                                                <article class="content-courses__text">
-                                                    <?php the_sub_field('courses_summary_text'); ?>
-                                                </article>
+                                                <div class="card__rating-star">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
+                                                              fill="#ED8A19"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="card__rating-star">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
+                                                              fill="#ED8A19"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="card__rating-star">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
+                                                              fill="#ED8A19"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="card__rating-star">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.5084 5.9808L12.1871 5.43674C11.8866 5.39892 11.623 5.20751 11.4822 4.92491L9.45734 0.862377C9.10256 0.150766 8.12838 0.17709 7.80874 0.906523L5.98271 5.07241C5.85569 5.36196 5.60152 5.56741 5.30332 5.62115L1.01384 6.39667C0.262556 6.53236 -0.0147849 7.51774 0.544146 8.06405L3.73675 11.1827C3.95865 11.3997 4.06533 11.7181 4.0219 12.0338L3.39576 16.5754C3.286 17.3708 4.08912 17.9536 4.75449 17.5615L8.55388 15.3232C8.81791 15.1675 9.13806 15.1589 9.40937 15.3001L13.3118 17.3316C13.9954 17.6873 14.769 17.0624 14.6208 16.2738L13.7761 11.7716C13.7173 11.4584 13.8084 11.1349 14.0197 10.9063L17.0577 7.6203C17.59 7.0451 17.2653 6.07607 16.5084 5.9808Z"
+                                                              fill="#ED8A19"/>
+                                                    </svg>
+                                                </div>
                                             </div>
+                                            <div class="card__rating-item">
+                                                <div class="card__rating-reviews-number">
+                                                    <?php the_sub_field('card_review'); ?>
+                                                </div>
+                                            </div>
+                                            <div class="card__rating-item">
+                                                <div class="card__rating-sum"><?php the_sub_field('card_rating'); ?></div>
+                                            </div>
+                                            <div class="card__rating-item card__rating-item_score">
+                                                <?php echo do_shortcode('[wp_ulike id="' . $like_counter . '"]');
+                                                $like_counter++;
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <div class="card__rating-description">
+                                            <?php the_sub_field('card_text'); ?>
+                                        </div>
+                                    </div>
+                                    <div class="card__grid-item card__grid-item_3">
+                                        <div class="card__course-pluses">
+                                            <div class="card__pluses-title"><?php the_sub_field('card_pluses_title'); ?></div>
+                                            <?php the_sub_field('card_pluses_text'); ?>
+                                        </div>
+                                    </div>
 
+                                    <div class="card__grid-item card__grid-item_4">
+                                        <div class="card__course-minuses">
+                                            <div class="card__minuses-title"><?php the_sub_field('card_minuses_title'); ?></div>
+                                            <?php the_sub_field('card_minuses_text'); ?>
+                                        </div>
+                                    </div>
+                                    <div class="card__grid-item card__grid-item_5">
+                                        <div class="card__course-price"><?php the_sub_field('card_price'); ?></div>
+                                        <a href="<?php the_sub_field('card_btn_link'); ?>" class="card__course-btn">
+                                            <?php the_sub_field('card_btn'); ?>
+                                        </a>
 
-                                        <?php endwhile;
-                                    else :
-                                    endif;
-                                    ?>
+                                        <div class="card__course-info">
+                                            <?php the_sub_field('card_info'); ?>
 
+                                        </div>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                <?php } ?>
+                        </section>
 
 
-            <?php endwhile;
-        else :
-        endif;
-        ?>
+                        <?php
+                        if (get_sub_field('courses_content_select')) { ?>
+                            <section class="content-courses">
+                                <div class="block__content block__content_content-courses">
+                                    <div class="content-courses__list-wrapper">
+                                        <div class="content-courses__title">
+                                            <?php the_sub_field('courses_title'); ?>
+                                        </div>
+                                        <div class="content-courses__list">
+                                            <?php
+                                            if (have_rows('courses_summary')):
+                                                while (have_rows('courses_summary')) :
+                                                    the_row(); ?>
+                                                    <div class="content-courses__item">
+                                                        <div class="content-courses__title-row">
+                                                            <div class="content-courses__item-counter"><?php the_sub_field('courses_summary_number'); ?></div>
+                                                            <h4 class="content-courses__item-title"><?php the_sub_field('courses_summary_title'); ?></h4>
+                                                            <div class="content-courses__item-btn-group">
+                                                                <div class="content-courses__item-btn content-courses__item-btn_1"></div>
+                                                                <div class="content-courses__item-btn content-courses__item-btn_2"></div>
+                                                            </div>
+                                                        </div>
+                                                        <article class="content-courses__text">
+                                                            <?php the_sub_field('courses_summary_text'); ?>
+                                                        </article>
+                                                    </div>
+
+
+                                                <?php endwhile;
+                                            else :
+                                            endif;
+                                            ?>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        <?php } ?>
+                    </div>
+
+
+                <?php endwhile;
+            else :
+            endif;
+            ?>
+        </div>
+
         <?php
         if (have_rows('slags_create')):
             while (have_rows('slags_create')) :
