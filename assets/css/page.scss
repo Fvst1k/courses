@@ -2,23 +2,48 @@
   padding: 30px 20px 10px;
 
 }
+
 .filter {
   width: 100%;
 }
+
+select {
+  cursor: pointer;
+  height: 50px;
+  border: 1px solid #e2e2e2;
+  font-size: 16px;
+  text-indent: 17px;
+  appearance: none;
+  border-radius: 0;
+  background: url(../images/icons8.png) no-repeat calc(100% - 20px) center;
+
+}
+
+.filter__btn-list {
+  padding-right: 10px;
+}
+
 .filter__row {
   display: flex;
   align-items: center;
 
   p {
     margin-right: 20px;
+    font-weight: 700;
+    font-size: 16px;
   }
 }
+
 .filter__btn-list {
-  max-width: 250px;
+  max-width: 320px;
   width: 100%;
-  @include before-sm(){
+  @include before-sm() {
     font-size: 14px;
   }
+}
+
+.wpulike-updown-voting {
+  min-width: 123px;
 }
 
 //=========================CARD===========================================//
@@ -30,7 +55,7 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   background: #ffffff;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 20px;
 
   @include before-lg() {
@@ -53,14 +78,15 @@
     }
     .card__grid-item_5 {
       grid-area: 1 / 2 / 4 / 3;
+
     }
-    .card__course-pluses{
+    .card__course-pluses {
       margin-left: 0;
     }
   }
-  @include before-sm(){
+  @include before-sm() {
     grid-template-columns: repeat(1, auto);
-    .card__grid-item{
+    .card__grid-item {
       grid-area: unset;
     }
 
@@ -74,6 +100,7 @@
   grid-area: 1 / 1 / 2 / 2;
   max-width: 420px;
   width: 100%;
+
   .card__video {
     max-width: 420px;
     max-height: 236px;
@@ -103,6 +130,12 @@
 
 .card__grid-item_5 {
   grid-area: 1 / 3 / 3 / 4;
+  border-left: 1px solid #e2e2e2;
+  padding-left: 20px;
+  @include before-sm {
+    border-left: unset;
+    padding-left: 0;
+  }
 }
 
 
@@ -113,6 +146,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   img {
     object-fit: contain;
 
@@ -135,9 +169,41 @@
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-size: 18px;
+  @include before-sm {
+    grid-template-columns: repeat(1, 1fr);
+    .card__rating-item_3 {
+      display: none;
+    }
+    .card__rating-reviews-number {
+      font-size: 14px;
+      margin-bottom: 10px;
+      margin-top: -5px;
+    }
+    .card__rating-item_4 {
+      margin-left: 20px;
+    }
+  }
 
+}
+
+.wpulike {
+  padding: 0;
+}
+
+.card__rating-item_2 {
+  margin-right: 15px;
+}
+
+.card__rating-item_3 {
+  margin-top: 5px;
+}
+
+.card__rating-item_4 {
+  margin-right: 15px;
+  margin-top: 5px;
 }
 
 .card__rating-item {
@@ -149,6 +215,7 @@
 .card__rating-item_star {
   display: flex;
   align-items: center;
+  margin-right: 0px;
 
   svg {
     margin-right: 2px;
@@ -175,21 +242,26 @@
   display: flex;
   align-items: center;
 }
+
 .mdp-liker-box .mdp-liker-buttons button span {
   border-left: none;
 }
 
+.wpulike-updown-voting .wp_ulike_put_image.wp_ulike_btn_is_active:after {
+  filter: unset;
+}
 
-#mdp-liker-btn-1{
-  background:url("../images/like-svgrepo-com1.svg") no-repeat;
+#mdp-liker-btn-1 {
+  background: url("../images/like-svgrepo-com1.svg") no-repeat;
   background-size: contain;
   margin: unset;
   padding-left: 12px;
 }
-#mdp-liker-btn-3{
-  background:url("../images/like-svgrepo-com2.svg") no-repeat;
+
+#mdp-liker-btn-3 {
+  background: url("../images/like-svgrepo-com2.svg") no-repeat;
   background-size: contain;
-  margin:0 0 0 10px;
+  margin: 0 0 0 10px;
   padding-left: 12px;
 }
 
@@ -198,6 +270,7 @@
   font-size: 18px;
   font-weight: 400;
   white-space: nowrap;
+
 
 }
 
@@ -219,10 +292,10 @@
 }
 
 .card__rating-description {
-  padding-top: 30px;
+  padding-top: 20px;
   max-width: 415px;
   width: 100%;
-  border-top: 1px solid #B6B6B6;
+  border-top: 1px solid #e2e2e2;
 
 }
 
@@ -239,7 +312,7 @@
 
 .card__pluses-title {
   color: #14B11B;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -254,7 +327,7 @@
 
 .card__minuses-title {
   color: #A00;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -273,8 +346,9 @@
   text-align: center;
   white-space: nowrap;
   display: flex;
-  padding: 18px 10px;
-  max-width: 254px;
+  padding: 15px;
+  line-height: 1.25em;
+  max-width: 278px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -299,32 +373,36 @@
   p {
     margin-top: 15px;
   }
-  ol,ul {
+
+  ol, ul {
     padding-left: 18px;
   }
 }
+
 .mdp-liker-buttons {
   display: flex;
   align-items: center;
 }
+
 .mdp-liker-box .mdp-liker-buttons button span {
   border-left: none;
 }
 
 
-#mdp-liker-btn-1{
-  background:url("../images/like-svgrepo-com1.svg") no-repeat left;
+#mdp-liker-btn-1 {
+  background: url("../images/like-svgrepo-com1.svg") no-repeat left;
   background-size: contain;
   margin: unset;
-  padding-left:12px;
+  padding-left: 12px;
 
   font-size: 16px;
   font-weight: 600;
 }
-#mdp-liker-btn-3{
-  background:url("../images/like-svgrepo-com2.svg") no-repeat left;
+
+#mdp-liker-btn-3 {
+  background: url("../images/like-svgrepo-com2.svg") no-repeat left;
   background-size: contain;
-  margin:0 0 0 15px;
+  margin: 0 0 0 15px;
   padding-left: 12px;
 
   font-size: 16px;
@@ -337,6 +415,7 @@
 .slats {
   margin: 0 auto;
 }
+
 .block__content_slats {
   margin: 30px 0 30px;
 }
@@ -356,61 +435,67 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 50px 20px 100px;
-  @include before-lg{
+  @include before-lg {
     padding: 20px 30px 20px 50px;
   }
-  @include before-md{
+  @include before-md {
     flex-flow: column;
     align-items: center;
     height: auto;
   }
-  @include before-sm{
+  @include before-sm {
     padding: 10px 15px 10px 15px;
     align-items: center;
 
   }
 }
-.slats__img{
+
+.slats__img {
   max-width: 200px;
   width: 25%;
   overflow: hidden;
-  img{
+
+  img {
     object-fit: contain;
     max-height: 150px;
   }
-  @include before-md{
+
+  @include before-md {
     width: 100%;
     margin-bottom: 30px;
 
   }
 }
-.slats__text-group{
+
+.slats__text-group {
   padding-left: 30px;
   width: 75%;
   overflow: hidden;
-  @include before-md{
+  @include before-md {
     padding-left: 0;
     max-width: 500px;
     width: 100%;
   }
 }
-.slats__title{
+
+.slats__title {
   margin-bottom: 15px;
   font-size: 25px;
   font-weight: 700;
-  @include before-md{
+  @include before-md {
     font-size: 20px;
   }
-  @include before-sm{
+  @include before-sm {
     font-size: 18px;
     text-align: center;
 
   }
 }
-.slats__text{
+
+.slats__text {
 
   text-wrap: normal;
-  @include before-sm{
+  @include before-sm {
     font-size: (calc(14px + 2 * ((100vw - 320px) / 860)));
     height: 100%;
   }
@@ -486,6 +571,7 @@
       opacity: 1;
 
     }
+
     .content-courses__item-btn_1 {
       transform: rotate(180deg) translateX(51%);
     }
@@ -565,88 +651,96 @@
 //================= /сontent-courses=================
 
 //================== reviews =================//
-.reviews{
+.reviews {
   margin-bottom: 50px;
 }
-.reviews__content{
+
+.reviews__content {
   background: #ffffff;
   padding: 30px 40px;
 }
-.reviews_title{
+
+.reviews_title {
   margin-bottom: 35px;
   font-size: 25px;
   font-weight: 700;
 }
-.reviews__table{
+
+.reviews__table {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 550px));
   grid-template-rows: repeat(2, auto);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  @include before-md{
+  @include before-md {
     grid-template-columns: repeat(1, minmax(300px, 550px));
   }
-  @include before-sm{
+  @include before-sm {
     grid-template-columns: repeat(1, minmax(200px, 550px));
   }
 
 }
-.reviews__table-item{
+
+.reviews__table-item {
   padding: 20px;
   border: 1px solid #E2E2E2;
 }
-.reviews__top{
+
+.reviews__top {
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include before-sm{
+  @include before-sm {
     flex-flow: column;
     justify-content: center;
     align-items: center;
   }
 }
-.reviews__name{
+
+.reviews__name {
   margin-right: 20px;
   max-width: 430px;
   width: 100%;
-  @include before-lg{
-    strong{
+  @include before-lg {
+    strong {
       font-size: 14px;
     }
   }
-  @include before-md{
+  @include before-md {
     margin-right: 0;
-    strong{
+    strong {
       font-size: 16px;
     }
   }
-  @include before-sm{
+  @include before-sm {
     margin-bottom: 10px;
-    strong{
+    strong {
       font-size: 14px;
     }
   }
 }
-.reviews__name-title{
+
+.reviews__name-title {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 600;
-  @include before-lg{
+  @include before-lg {
     font-size: 18px;
   }
 }
-.reviews__stars{
+
+.reviews__stars {
   display: flex;
   font-size: 16px;
 }
-.reviews__text{
-  @include before-sm{
+
+.reviews__text {
+  @include before-sm {
     font-size: 14px;
 
   }
 }
-
 
 
 //================== /reviews =================//

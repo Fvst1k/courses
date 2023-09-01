@@ -30,7 +30,7 @@ Template Name: header
                     <?php the_custom_logo(); ?>
                 </div>
                 <div class="header__menu">
-                    <?php wp_nav_menu() ?>
+                    <?php wp_nav_menu( array( 'theme_location' => 'max_mega_menu_1' ) ); ?>
                 </div>
             </div>
         </div>

@@ -269,22 +269,43 @@ a {
   width: 100%;
 }
 
+select {
+  cursor: pointer;
+  height: 50px;
+  border: 1px solid #e2e2e2;
+  font-size: 16px;
+  text-indent: 17px;
+  appearance: none;
+  border-radius: 0;
+  background: url(../images/icons8.png) no-repeat calc(100% - 20px) center;
+}
+
+.filter__btn-list {
+  padding-right: 10px;
+}
+
 .filter__row {
   display: flex;
   align-items: center;
 }
 .filter__row p {
   margin-right: 20px;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .filter__btn-list {
-  max-width: 250px;
+  max-width: 320px;
   width: 100%;
 }
 @media screen and (max-width: 575px) {
   .filter__btn-list {
     font-size: 14px;
   }
+}
+
+.wpulike-updown-voting {
+  min-width: 123px;
 }
 
 .card__grid {
@@ -295,7 +316,7 @@ a {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   background: #ffffff;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 20px;
 }
 @media screen and (max-width: 991px) {
@@ -363,6 +384,14 @@ a {
 
 .card__grid-item_5 {
   grid-area: 1/3/3/4;
+  border-left: 1px solid #e2e2e2;
+  padding-left: 20px;
+}
+@media screen and (max-width: 575px) {
+  .card__grid-item_5 {
+    border-left: unset;
+    padding-left: 0;
+  }
 }
 
 .card__img {
@@ -392,8 +421,42 @@ a {
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-size: 18px;
+}
+@media screen and (max-width: 575px) {
+  .card__rating-table {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card__rating-table .card__rating-item_3 {
+    display: none;
+  }
+  .card__rating-table .card__rating-reviews-number {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+  }
+  .card__rating-table .card__rating-item_4 {
+    margin-left: 20px;
+  }
+}
+
+.wpulike {
+  padding: 0;
+}
+
+.card__rating-item_2 {
+  margin-right: 15px;
+}
+
+.card__rating-item_3 {
+  margin-top: 5px;
+}
+
+.card__rating-item_4 {
+  margin-right: 15px;
+  margin-top: 5px;
 }
 
 .card__rating-item {
@@ -405,6 +468,7 @@ a {
 .card__rating-item_star {
   display: flex;
   align-items: center;
+  margin-right: 0px;
 }
 .card__rating-item_star svg {
   margin-right: 2px;
@@ -428,6 +492,10 @@ a {
 
 .mdp-liker-box .mdp-liker-buttons button span {
   border-left: none;
+}
+
+.wpulike-updown-voting .wp_ulike_put_image.wp_ulike_btn_is_active:after {
+  filter: unset;
 }
 
 #mdp-liker-btn-1 {
@@ -467,10 +535,10 @@ a {
 }
 
 .card__rating-description {
-  padding-top: 30px;
+  padding-top: 20px;
   max-width: 415px;
   width: 100%;
-  border-top: 1px solid #B6B6B6;
+  border-top: 1px solid #e2e2e2;
 }
 
 .card__course-pluses {
@@ -485,7 +553,7 @@ a {
 
 .card__pluses-title {
   color: #14B11B;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -498,7 +566,7 @@ a {
 
 .card__minuses-title {
   color: #A00;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -516,8 +584,9 @@ a {
   text-align: center;
   white-space: nowrap;
   display: flex;
-  padding: 18px 10px;
-  max-width: 254px;
+  padding: 15px;
+  line-height: 1.25em;
+  max-width: 278px;
   width: 100%;
   justify-content: center;
   align-items: center;
