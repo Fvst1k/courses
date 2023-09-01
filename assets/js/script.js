@@ -15,6 +15,7 @@ function openSummary() {
 
 mySort('data-price');
 document.querySelector('.filter__btn-list').addEventListener('change', evt => {
+
     const selectedValue = event.target.value;
 
     if(+selectedValue === 1) {
