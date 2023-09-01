@@ -199,7 +199,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .header__row {
-    flex-flow: column;
+    position: relative;
   }
 }
 
@@ -209,6 +209,9 @@ a {
 @media screen and (max-width: 767px) {
   .header__menu {
     margin-left: unset;
+    position: absolute;
+    right: 0;
+    width: 100%;
   }
 }
 
@@ -225,12 +228,6 @@ a {
   max-width: 180px;
   width: 100%;
 }
-@media screen and (max-width: 767px) {
-  .header__logo {
-    padding-bottom: 20px;
-  }
-}
-
 .menu {
   display: flex;
   align-items: center;
