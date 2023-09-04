@@ -479,6 +479,7 @@ select {
 .card__rating-item_4 {
   margin-right: 15px;
   margin-top: 5px;
+  width: 200px;
 }
 
 .card__rating-item {

@@ -46,7 +46,10 @@ Template Name: template
         if (have_rows('create_cards')):
             while (have_rows('create_cards')) :
                 the_row(); ?>
-                <div class="filter_item" reviews="<?php the_sub_field('filter_reviews'); ?>" rating="<?php the_sub_field('filter_rating'); ?>" level="<?php the_sub_field('filter_level'); ?>" data-price="<?php the_sub_field('filter_price'); ?>">
+                <div class="filter_item" reviews="<?php the_sub_field('filter_reviews'); ?>"
+                     rating="<?php the_sub_field('filter_rating'); ?>"
+                     level="<?php the_sub_field('filter_level'); ?>"
+                     data-price="<?php the_sub_field('filter_price'); ?>">
                     <section class="card">
                         <div class="block__content">
                             <div class="card__grid">
@@ -55,7 +58,7 @@ Template Name: template
                                         <img src="<?php the_sub_field('card_image'); ?>" alt="error">
                                     </div>
                                     <div class="card__video">
-                                        <?php if (get_sub_field('video_add')) {?>
+                                        <?php if (get_sub_field('video_add')) { ?>
                                             <video src="<?php the_sub_field('card_video'); ?>" controls>
                                             </video>
                                         <?php } ?>
@@ -117,24 +120,27 @@ Template Name: template
                                             ?>
                                         </div>
                                     </div>
+
+                                </div>
+                                <div class="card__grid-item card__grid-item_3">
                                     <div class="card__rating-description">
                                         <?php the_sub_field('card_text'); ?>
                                     </div>
                                 </div>
-                                <div class="card__grid-item card__grid-item_3">
+                                <div class="card__grid-item card__grid-item_4">
                                     <div class="card__course-pluses">
                                         <div class="card__pluses-title"><?php the_sub_field('card_pluses_title'); ?></div>
                                         <?php the_sub_field('card_pluses_text'); ?>
                                     </div>
                                 </div>
 
-                                <div class="card__grid-item card__grid-item_4">
+                                <div class="card__grid-item card__grid-item_5">
                                     <div class="card__course-minuses">
                                         <div class="card__minuses-title"><?php the_sub_field('card_minuses_title'); ?></div>
                                         <?php the_sub_field('card_minuses_text'); ?>
                                     </div>
                                 </div>
-                                <div class="card__grid-item card__grid-item_5">
+                                <div class="card__grid-item card__grid-item_6">
                                     <div class="card__course-price"><?php the_sub_field('card_price'); ?></div>
                                     <a href="<?php the_sub_field('card_btn_link'); ?>" class="card__course-btn">
                                         <?php the_sub_field('card_btn'); ?>
