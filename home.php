@@ -8,98 +8,79 @@ Template Name: main-page
 
 
     <main>
+
         <section class="categories">
             <div class="block__content block__content_categories">
-                <h2 class="categories__title">Courses</h2>
+                <div class="categories__title"><?php the_field('categories_title'); ?></div>
                 <div class="categories__table">
-                    <a class="categories__table-item" href="#">
-                        <div class="categories__item-img">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
-                        </div>
-                        <div class="categories__item-description">
-                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
-                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
-                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
-                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
-                                dsfdsfdsfdsfdsfdsfdsfdsfds
-                                dsaasdasdasdasdas</p>
-                        </div>
-                    </a>
-                    <a class="categories__table-item" href="#">
-                        <div class="categories__item-img">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
-                        </div>
-                        <div class="categories__item-description">
-                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
-                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
-                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
-                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
-                                dsfdsfdsfdsfdsfdsfdsfdsfds
-                                dsaasdasdasdasdas</p>
-                        </div>
-                    </a>
-                    <a class="categories__table-item" href="#">
-                        <div class="categories__item-img">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
-                        </div>
-                        <div class="categories__item-description">
-                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
-                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
-                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
-                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
-                                dsfdsfdsfdsfdsfdsfdsfdsfds
-                                dsaasdasdasdasdas</p>
-                        </div>
-                    </a>
-                    <a class="categories__table-item" href="#">
-                        <div class="categories__item-img">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
-                        </div>
-                        <div class="categories__item-description">
-                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
-                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
-                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
-                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
-                                dsfdsfdsfdsfdsfdsfdsfdsfds
-                                dsaasdasdasdasdas</p>
-                        </div>
-                    </a>
+                    <?php
+                    global $post;
+
+                    $myposts = get_posts([
+                        'post_type' => 'page',
+                        'numberposts' => -1,
+
+                    ]);
+
+                    if ($myposts) {
+                        foreach ($myposts
+
+                                 as $post) {
+                            setup_postdata($post);
+                            ?>
+
+                            <a class="categories__table-item" href="<?php the_permalink($post); ?>">
+                                <div class="categories__item-img">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
+                                <div class="categories__item-description">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                            </a>
+
+                            <?php
+                        }
+                    }
+                    wp_reset_postdata();
+                    ?>
+
 
                 </div>
             </div>
         </section>
-        <?php  if(get_field('filter_set')) {?>
+        <?php if (get_field('filter_set')) { ?>
 
-        <section  class="filter__btns">
-            <div class="block__content block__content_filter">
-                <div class="filter__row">
-                    <p>Фильтрация: </p>
-                    <select class="filter__btn-list">
-                        <option value="1" class="filter__btn">
-                            для начинающих
-                        </option>
-                        <option value="2" class="filter__btn">
-                            для опытных
-                        </option >
-                        <option value="3" class="filter__btn filter__btn_price" selected>
-                            сначала недорогие
-                        </option >
+            <section class="filter__btns">
+                <div class="block__content block__content_filter">
+                    <div class="filter__row">
+                        <p>Фильтрация: </p>
+                        <select class="filter__btn-list">
+                            <option value="1" class="filter__btn">
+                                для начинающих
+                            </option>
+                            <option value="2" class="filter__btn">
+                                для опытных
+                            </option>
+                            <option value="3" class="filter__btn filter__btn_price" selected>
+                                сначала недорогие
+                            </option>
 
-                        <option value="4" class="filter__btn filter__btn_price_inv" >
-                            сначала дорогие
-                        </option >
+                            <option value="4" class="filter__btn filter__btn_price_inv">
+                                сначала дорогие
+                            </option>
 
-                        <option value="5" class="filter__btn">
-                            по рейтингу
-                        </option >
-                        <option value="6" class="filter__btn">
-                            по отзывам
-                        </option >
-                    </select>
+                            <option value="5" class="filter__btn">
+                                по рейтингу
+                            </option>
+                            <option value="6" class="filter__btn">
+                                по отзывам
+                            </option>
+                        </select>
+                    </div>
+
                 </div>
-
-            </div>
-        </section>
+            </section>
 
         <?php } ?>
 
@@ -109,7 +90,10 @@ Template Name: main-page
             if (have_rows('create_cards')):
                 while (have_rows('create_cards')) :
                     the_row(); ?>
-                    <div class="filter_item" reviews="<?php the_sub_field('filter_reviews'); ?>" rating="<?php the_sub_field('filter_rating'); ?>" level="<?php the_sub_field('filter_level'); ?>" data-price="<?php the_sub_field('filter_price'); ?>">
+                    <div class="filter_item" reviews="<?php the_sub_field('filter_reviews'); ?>"
+                         rating="<?php the_sub_field('filter_rating'); ?>"
+                         level="<?php the_sub_field('filter_level'); ?>"
+                         data-price="<?php the_sub_field('filter_price'); ?>">
                         <section class="card">
                             <div class="block__content">
                                 <div class="card__grid">
@@ -118,9 +102,9 @@ Template Name: main-page
                                             <img src="<?php the_sub_field('card_image'); ?>" alt="error">
                                         </div>
                                         <div class="card__video">
-                                           <?php if (get_sub_field('video_add')) {?>
-                                            <video src="<?php the_sub_field('card_video'); ?>" controls>
-                                            </video>
+                                            <?php if (get_sub_field('video_add')) { ?>
+                                                <video src="<?php the_sub_field('card_video'); ?>" controls>
+                                                </video>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -180,24 +164,27 @@ Template Name: main-page
                                                 ?>
                                             </div>
                                         </div>
+
+                                    </div>
+                                    <div class="card__grid-item card__grid-item_3">
                                         <div class="card__rating-description">
                                             <?php the_sub_field('card_text'); ?>
                                         </div>
                                     </div>
-                                    <div class="card__grid-item card__grid-item_3">
+                                    <div class="card__grid-item card__grid-item_4">
                                         <div class="card__course-pluses">
                                             <div class="card__pluses-title"><?php the_sub_field('card_pluses_title'); ?></div>
                                             <?php the_sub_field('card_pluses_text'); ?>
                                         </div>
                                     </div>
 
-                                    <div class="card__grid-item card__grid-item_4">
+                                    <div class="card__grid-item card__grid-item_5">
                                         <div class="card__course-minuses">
                                             <div class="card__minuses-title"><?php the_sub_field('card_minuses_title'); ?></div>
                                             <?php the_sub_field('card_minuses_text'); ?>
                                         </div>
                                     </div>
-                                    <div class="card__grid-item card__grid-item_5">
+                                    <div class="card__grid-item card__grid-item_6">
                                         <div class="card__course-price"><?php the_sub_field('card_price'); ?></div>
                                         <a href="<?php the_sub_field('card_btn_link'); ?>" class="card__course-btn">
                                             <?php the_sub_field('card_btn'); ?>
@@ -334,7 +321,6 @@ Template Name: main-page
 
             </div>
         </section>
-
 
 
     </main>
