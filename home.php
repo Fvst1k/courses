@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: template
+Template Name: main-page
 */
 ?>
 
@@ -8,6 +8,68 @@ Template Name: template
 
 
     <main>
+        <section class="categories">
+            <div class="block__content block__content_categories">
+                <h2 class="categories__title">Courses</h2>
+                <div class="categories__table">
+                    <a class="categories__table-item" href="#">
+                        <div class="categories__item-img">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
+                        </div>
+                        <div class="categories__item-description">
+                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
+                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
+                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
+                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
+                                dsfdsfdsfdsfdsfdsfdsfdsfds
+                                dsaasdasdasdasdas</p>
+                        </div>
+                    </a>
+                    <a class="categories__table-item" href="#">
+                        <div class="categories__item-img">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
+                        </div>
+                        <div class="categories__item-description">
+                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
+                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
+                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
+                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
+                                dsfdsfdsfdsfdsfdsfdsfdsfds
+                                dsaasdasdasdasdas</p>
+                        </div>
+                    </a>
+                    <a class="categories__table-item" href="#">
+                        <div class="categories__item-img">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
+                        </div>
+                        <div class="categories__item-description">
+                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
+                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
+                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
+                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
+                                dsfdsfdsfdsfdsfdsfdsfdsfds
+                                dsaasdasdasdasdas</p>
+                        </div>
+                    </a>
+                    <a class="categories__table-item" href="#">
+                        <div class="categories__item-img">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/blog-1.png" alt="error">
+                        </div>
+                        <div class="categories__item-description">
+                            <h3>dgdgddgdgdsadsadasdasdsadasdasdasddsadsadasdas</h3>
+                            <p>ewrewrewrewrewrewrewsdfsfdsfdsfdsfdsfdsfdsfffffff
+                                fdsfdsdsfdsfdsfdsfdsfdsfdsf
+                                dsfdsfdsfdsfdsfdsfdsfdsdfsf
+                                dsfdsfdsfdsfdsfdsfdsfdsfds
+                                dsaasdasdasdasdas</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <?php  if(get_field('filter_set')) {?>
+
         <section  class="filter__btns">
             <div class="block__content block__content_filter">
                 <div class="filter__row">
@@ -38,6 +100,9 @@ Template Name: template
 
             </div>
         </section>
+
+        <?php } ?>
+
         <div class="filter">
             <?php
             $like_counter = 9999;
@@ -53,8 +118,10 @@ Template Name: template
                                             <img src="<?php the_sub_field('card_image'); ?>" alt="error">
                                         </div>
                                         <div class="card__video">
+                                           <?php if (get_sub_field('video_add')) {?>
                                             <video src="<?php the_sub_field('card_video'); ?>" controls>
                                             </video>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                     <div class="card__grid-item card__grid-item_2">
@@ -267,6 +334,8 @@ Template Name: template
 
             </div>
         </section>
+
+
 
     </main>
 
